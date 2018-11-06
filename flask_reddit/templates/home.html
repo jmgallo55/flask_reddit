@@ -82,7 +82,7 @@
         <form method="GET" action="/search/" class="" role="search">
             <div class="form-group">
                 <input type="text" name="query" class="reddit-search form-control" 
-                    placeholder="Search reddit!">
+                    placeholder="Search Inside IceCloud!">
             </div>
             <!--<button type="submit" class="btn btn-default">Submit</button>-->
         </form> 
@@ -102,15 +102,9 @@
             inverse-white-button add-subreddit-button">create community +</button></a>
     </div>
 
-    {% if cur_subreddit is defined %}
-    <p class="subreddit-desc">
-        {{ cur_subreddit.desc }}
-    </p>
-    {% endif %}
-
     {% endblock %}
 
-    <h4 class="subreddit-desc">Subreddits</h4>
+    <h4 class="subreddit-desc">Sub Communities</h4>
     <ul id="subreddit-list">
         {% for subreddit in subreddits[:10] %}
         <li><a href="/r/{{ subreddit.name }}">{{ subreddit.name }}</a></li>
@@ -118,10 +112,10 @@
     </ul>
     <a class="align-right-col" href="{{ url_for('subreddits.view_all') }}">view all</a>
     <i>
-    <div class="align-right-col byline-lucas">Built by: <a href="https://codelucas.com">Lucas Ou-Yang</a>.
+    <div class="align-right-col byline-lucas"></a>.
         <br>
         <a href="https://github.com/codelucas/flask_reddit">
-            View code on Github</a>.</div>
+            </a>.</div>
     </i>
   {% endblock %}
 </div>

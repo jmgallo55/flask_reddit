@@ -45,12 +45,12 @@
                       {% if cur_subreddit is defined and cur_subreddit.id != 1 %}
                           {{ cur_subreddit.name }}
                       {% else %} 
-                          {{ config.BRAND }}
+			{{ config.BRAND }}
                       {% endif %}
                   </a>
               </li>
               <li>
-                  <a href="/?trending=true">trending</a>
+                  <a href="/?trending=true">Trending</a>
               </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -70,7 +70,11 @@
       </div><!-- /.container -->
     </nav>
 
+
     <div class="container">
+
+      <br/>
+      <div>Welcome!  You can use this to communicate with the rest of the IceCloud staff.</div>
       <div id="messages-wrap">
         <div id="messages">
           {% for category, msg in get_flashed_messages(with_categories=true) %}
@@ -107,6 +111,16 @@
     <!-- Let's use a CDN -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<script src="https://lex-web-ui-codebuilddeploy-1t921rvks-webappbucket-1tlj7ovlhfj4v.s3.amazonaws.com/lex-web-ui-loader.min.js"></script>
+<script>
+  var loaderOpts = {
+    baseUrl: 'https://lex-web-ui-codebuilddeploy-1t921rvks-webappbucket-1tlj7ovlhfj4v.s3.amazonaws.com/'
+  };
+  var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
+  loader.load()
+    .catch(function (error) { console.error(error); });
+</script>
     {% block scripts %}
 
     {% endblock %}

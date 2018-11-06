@@ -4,7 +4,6 @@
  */
 
 body {
-
 }
 
 .well {
@@ -163,14 +162,13 @@ div.spacer {
     margin: 0px 0 20px 0px;
 }
 
-.navbar-default .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-    color: #eb6864;
-    background-color: #fff;
+.navbar-default {
+    background-color: #5899E2;
+    border-color: #E7E7E7;
 }
 
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-    color: #eb6864;
-    background-color: #fff;
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #A7CAB1;
 }
 
 .thread-comment-section {
@@ -207,13 +205,6 @@ div.spacer {
 
 a.brand-nav {
     margin-left: -12px;
-    background-color: #eeeeee;
-}
-
-
-a.brand-nav:hover, a.brand-nav:focus {
-    margin-left: -12px;
-    background-color: #eeeeee !important;
 }
 
 .flash-banner {
@@ -232,10 +223,6 @@ img.listing-image {
     height: 70px;
     margin-left: 5px;
     margin-top: -14px;
-}
-
-.highlight {
-    background-color: yellow;
 }
 
 .thread-permalink .listing-title {
